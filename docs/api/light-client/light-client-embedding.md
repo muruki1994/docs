@@ -554,6 +554,74 @@ If **block_number > latest_block,** block status cannot yet be derived and the r
 HTTP/1.1 404 Not Found
 ```
 
+### **GET** `/v2/blocks/{block_number}/header`
+
+Gets the block header if it is available.
+
+If **block_status = "verifying-confidence|verifying-data|finished"**, the header is available, and the response is:
+
+```yaml
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "hash": "{hash}",
+  "parent_hash": "{parent-hash}",
+  "number": {number},
+  "state_root": "{state-root}",
+  "extrinsics_root": "{extrinsics-root}",
+  "extension": {
+    "rows": {rows},
+    "cols": {cols},
+    "data_root": "{data-root}", // Optional
+    "commitments": [
+      "{commitment}", ...
+    ],
+    "app_lookup": {
+      "size": {size},
+      "index": [
+        {
+          "app_id": {app-id},
+          "start": {start}
+        }
+      ]
+    }
+  }
+}
+```
+
+If **block_status = "unavailable|pending|verifying-header"**, header is not available and response is:
+
+```yaml
+HTTP/1.1 400 Bad Request
+```
+
+### **GET** `/v2/blocks/{block_number}/data?fields=data,extrinsic`
+
+Gets the block data if available. Query parameter `fields` specifies whether to return decoded data and encoded extrinsic (with signature). If `fields` parameter is omitted, response contains **hash** and **data**, while **extrinsic** is omitted.
+
+If **block_status = "finished"**, data is available and the response is:
+
+```yaml
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "data_transactions": [
+    {
+      "data": "{base-64-encoded-data}" // Optional
+      "extrinsic": "{base-64-encoded-extrinsic}", // Optional
+    }
+  ]
+}
+```
+
+If **block_status** is not **“finished”**, or **app** mode is not enabled, data is not available and the response is:
+
+```yaml
+HTTP/1.1 400 Bad Request
+```
+
 ### POST `/v2/submit`
 
 Submits application data to the avail network.\
