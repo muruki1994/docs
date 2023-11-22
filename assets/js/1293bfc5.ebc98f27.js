@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkavail_docs_wiki=self.webpackChunkavail_docs_wiki||[]).push([[1985],{7747:i=>{i.exports=JSON.parse('{"title":"Optimism","slug":"/category/optimism","permalink":"/category/optimism","navigation":{"previous":{"title":"Optimium","permalink":"/category/optimium"},"next":{"title":"Overview","permalink":"/build/op-stack/overview"}}}')}}]);
