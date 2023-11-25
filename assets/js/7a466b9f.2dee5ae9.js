@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkavail_docs_wiki=self.webpackChunkavail_docs_wiki||[]).push([[5125],{6479:e=>{e.exports=JSON.parse('{"title":"Polygon zkEVM","slug":"/category/polygon-zkevm","permalink":"/category/polygon-zkevm","navigation":{"previous":{"title":"Validium","permalink":"/category/validium"},"next":{"title":"Reference","permalink":"/api/use-case-validiums"}}}')}}]);
