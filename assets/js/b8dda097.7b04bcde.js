@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkavail_docs_wiki=self.webpackChunkavail_docs_wiki||[]).push([[4630],{6403:e=>{e.exports=JSON.parse('{"title":"Consensus","slug":"/category/consensus","permalink":"/category/consensus","navigation":{"previous":{"title":"Learn about Avail","permalink":"/category/learn-about-avail"},"next":{"title":"BABE","permalink":"/about/consensus/babe"}}}')}}]);
