@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkavail_docs_wiki=self.webpackChunkavail_docs_wiki||[]).push([[2256],{7080:e=>{e.exports=JSON.parse('{"title":"New User Guide","slug":"/category/new-user-guide","permalink":"/category/new-user-guide","navigation":{"previous":{"title":"NPoS","permalink":"/about/consensus/npos"},"next":{"title":"Create an Account","permalink":"/about/accounts"}}}')}}]);
