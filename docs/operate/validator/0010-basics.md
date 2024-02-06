@@ -13,6 +13,7 @@ image: https://docs.availproject.org/img/avail/AvailDocs.png
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ## Introduction
 
@@ -39,7 +40,7 @@ Prebuild list:
 
 Once you have found your OS (or picked the generic one), execute the given command to obtain the needed Avail Node binary.
 
-<Tabs groupId="operating-systems">
+<Tabs groupId="os" queryString>
 <TabItem value="ubuntu2004" label="Ubuntu 20.04">
 
 ```bash
