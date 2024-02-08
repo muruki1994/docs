@@ -26,7 +26,7 @@ The fast upgrade steps are:
 - Stop the Avail node.
 
 ```
-sudo systemctl stop availd.service
+sudo systemctl stop avail.service
 ```
 
 - Locate your Avail binary, create a backup of the current binary, and then uninstall the existing binary by deleting the binary. Proceed to download the most recent binary announced in Discord, which will replace the previous binary version.
@@ -44,13 +44,13 @@ rm data-avail-linux-amd64.tar.gz
 - Start the Avail node again.
 
 ```
-sudo systemctl start availd.service
+sudo systemctl start avail.service
 ```
 
 - Ensure your node starts syncing with the network, view the logs from the running service.
 
 ```
-journalctl -f -u availd.service
+journalctl -f -u avail.service
 ```
 
 - Also check that your node is visible on telemetry and the version matches the upgrade version.

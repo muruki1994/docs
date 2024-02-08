@@ -94,16 +94,16 @@ Make sure that you always grab the binary from the latest version. When this gui
 :::
 
 ```bash
-# Obtaning v.1.8.0.3 for Ubuntu 22.04
+# Obtaning v.1.10.0.0 for Ubuntu 22.04
 # wget is a command-line utility for downloading files from the internet.
-wget https://github.com/availproject/avail/releases/download/v1.9.0.0/x86_64-ubuntu-2204-data-avail.tar.gz
+wget https://github.com/availproject/avail/releases/download/v1.10.0.0/x86_64-ubuntu-2204-data-avail.tar.gz
 
 # tar is a command-line utility for working with tarballs, compressed or uncompressed archives containing one or more files or directories.
 # The -x option extracts files from an archive, and the -f option specifies the archive file. When used together as tar -xf, it removes the contents of the specified archive file.
 tar -xf x86_64-ubuntu-2204-data-avail.tar.gz
 
 # rm stands for "remove" in Linux and Unix-like operating systems. It is used to delete files or directories.
-rm amd64-ubuntu-2204-data-avail.tar.gz
+rm x86_64-ubuntu-2204-data-avail.tar.gz
 ```
 
 We will create a system service file for our node to run automatically, even on restarts. Systemd will run our node as a daemon and manage it for us. To know more about systemd, go [here](https://en.wikipedia.org/wiki/Systemd).
