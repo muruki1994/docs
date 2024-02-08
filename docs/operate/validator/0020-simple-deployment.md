@@ -225,10 +225,10 @@ To read more about SELinux, check the [following page](https://www.redhat.com/en
 
 ```bash
 # Option 1: If you are using Docker with non-root user use this script
-sudo docker --restart on-failure run -d -v /root/avail/node-data:/da/node-data -p 9944 -p 30333 docker.io/availj/avail:v1.8.0.3 --chain goldberg -d /da/node-data --validator --name MyAwesomeContainerNode
+sudo docker run --restart=on-failure -d -v /root/avail/node-data:/da/node-data -p 9944:9944 -p 30333:30333 docker.io/availj/avail:v1.8.0.3 --chain goldberg -d /da/node-data --validator --name MyAwesomeContainerNode
 
 # Option 2: If you are using Docker on SELinux use this script
-sudo docker --restart on-failure run -d  -v /root/avail/node-data:/da/node-data:z -p 9944 -p 30333 docker.io/availj/avail:v1.8.0.3 --chain goldberg -d /da/node-data --validator --name MyAwesomeContainerNode
+docker run --restart=on-failure -d -v /root/avail/node-data:/da/node-data:z -p 9944 -p 30333 docker.io/availj/avail:v1.8.0.3 --chain goldberg -d /da/node-data --validator --name MyAwesomeContainerNode
 
 # Option 3: If you are using Podman use this script
 podman run -d -v /root/avail/node-data:/da/node-data -p 9944 -p 30333 docker.io/availj/avail:v1.8.0.3 --chain goldberg -d /da/node-data --validator --name MyAwesomeContainerNode
