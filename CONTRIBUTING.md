@@ -101,7 +101,7 @@ yarn start
    > Refer to [GitHub Docs: Configuring a remote for a fork](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork).
 
    ```bash
-   git remote add upstream https://github.com/availproject/avail-docs
+   git remote add upstream https://github.com/availproject/availproject.github.io
    ```
 
 5. **Sync Your Fork**
